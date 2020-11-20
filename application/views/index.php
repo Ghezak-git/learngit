@@ -8,7 +8,7 @@
 						<div class="f-icon">
 							<img src="<?= base_url(); ?>assets/img/features/f-icon1.png" alt="">
 						</div>
-						<h6>Free Delivery</h6>
+						<h6>Free Delivery test</h6>
 						<p>Free Shipping on all order</p>
 					</div>
 				</div>
