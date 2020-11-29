@@ -3,12 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Products_model extends CI_Model {
 
-    // public function getProducts($number,$offset){
-    //     $this->db->select("products.id AS productsId, products.title AS productsTitle, products.price AS productsPrice, products.stock AS productsStock, products.date_submit AS productsDate, products.img AS productsImg, products.publish AS productsPublish, categories.name AS categoriesName");
-    //     $this->db->join("categories", "products.category=categories.id");
-    //     $this->db->order_by("products.id", "desc");
-    //     return $this->db->get("products",$number,$offset);
-    // }
+    public function getProducts(){
+        $this->db->select("produk.id_produk AS productsId, produk.judul AS productsTitle, produk.harga AS productsPrice, produk.stock AS productsStock, produk.tanggal_submit AS productsDate, produk.img AS productsImg, produk.terbit AS productsPublish, kategori.nama AS categoriesName");
+        $this->db->join("kategori", "produk.kategori=kategori.id_kategori");
+        $this->db->order_by("produk.id_produk", "desc");
+        return $this->db->get("produk");
+        // return $this->db->get("products",$number,$offset);
+    }
 
     // public function getAllProducts($type = ""){
     //     if($type == ""){
