@@ -10,11 +10,11 @@
           <div class="row">
 
             <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-info shadow h-100 py-2">
+            <div class="card border-left-warning shadow h-100 py-2">
               <div class="card-body">
                 <div class="row no-gutters align-items-center">
                   <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Orders In</div>
+                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Orders In</div>
                     <div class="h5 mb-0 font-weight-bold text-gray-800">1</div>
                   </div>
                   <div class="col-auto">
@@ -26,11 +26,11 @@
           </div>
 
             <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-info shadow h-100 py-2">
+            <div class="card border-left-warning shadow h-100 py-2">
               <div class="card-body">
                 <div class="row no-gutters align-items-center">
                   <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Successful Transaction</div>
+                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Successful Transaction</div>
                     <div class="h5 mb-0 font-weight-bold text-gray-800">2</div>
                   </div>
                   <div class="col-auto">
@@ -42,11 +42,11 @@
           </div>
 
             <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-info shadow h-100 py-2">
+            <div class="card border-left-warning shadow h-100 py-2">
               <div class="card-body">
                 <div class="row no-gutters align-items-center">
                   <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Subscriber</div>
+                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Subscriber</div>
                     <div class="h5 mb-0 font-weight-bold text-gray-800">2</div>
                   </div>
                   <div class="col-auto">
@@ -58,11 +58,11 @@
           </div>
 
             <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-info shadow h-100 py-2">
+            <div class="card border-left-warning shadow h-100 py-2">
               <div class="card-body">
                 <div class="row no-gutters align-items-center">
                   <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Email Sent</div>
+                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Email Sent</div>
                     <div class="h5 mb-0 font-weight-bold text-gray-800">1</div>
                   </div>
                   <div class="col-auto">
@@ -74,11 +74,11 @@
           </div>
 
             <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-info shadow h-100 py-2">
+            <div class="card border-left-warning shadow h-100 py-2">
               <div class="card-body">
                 <div class="row no-gutters align-items-center">
                   <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Category</div>
+                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Category</div>
                     <div class="h5 mb-0 font-weight-bold text-gray-800">4</div>
                   </div>
                   <div class="col-auto">
@@ -90,11 +90,11 @@
           </div>
 
             <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-info shadow h-100 py-2">
+            <div class="card border-left-warning shadow h-100 py-2">
               <div class="card-body">
                 <div class="row no-gutters align-items-center">
                   <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Product</div>
+                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Product</div>
                     <div class="h5 mb-0 font-weight-bold text-gray-800">12</div>
                   </div>
                   <div class="col-auto">
@@ -106,11 +106,11 @@
           </div>
 
             <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-info shadow h-100 py-2">
+            <div class="card border-left-warning shadow h-100 py-2">
               <div class="card-body">
                 <div class="row no-gutters align-items-center">
                   <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Promo</div>
+                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Promo</div>
                     <div class="h5 mb-0 font-weight-bold text-gray-800">6</div>
                   </div>
                   <div class="col-auto">
@@ -122,11 +122,11 @@
           </div>
 
             <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-info shadow h-100 py-2">
+            <div class="card border-left-warning shadow h-100 py-2">
               <div class="card-body">
                 <div class="row no-gutters align-items-center">
                   <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Testimonials</div>
+                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Testimonials</div>
                     <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
                   </div>
                   <div class="col-auto">
@@ -184,7 +184,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span style="color: #111111">Copyright &copy; Your Website 2019</span>
+            <span style="color: gray">Copyright &copy; Your Website 2019</span>
           </div>
         </div>
       </footer>
