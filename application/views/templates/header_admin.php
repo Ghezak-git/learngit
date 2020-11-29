@@ -21,6 +21,8 @@
   <!-- Custom styles for this template-->
   <link href="<?= base_url(); ?>assets/css/sb-admin-2.css" rel="stylesheet">
 
+  <link href="<?= base_url(); ?>assets/js/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
@@ -78,7 +80,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="<?= base_url(); ?>administrator/products">
           <i class="fas fa-fw fa-cube"></i>
           <span>Product</span></a>
       </li>
