@@ -35,10 +35,19 @@
 
   <!-- Custom scripts for all pages-->
   <script src="<?= base_url(); ?>assets/js/sb-admin-2.min.js"></script>
-  <script src="<?= base_url(); ?>assets/js/vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="<?= base_url(); ?>assets/js/vendor/datatables/jquery.dataTables.js"></script>
   <script src="<?= base_url(); ?>assets/js/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+  <script src="<?= base_url(); ?>assets/select2-4.0.6-rc.1/dist/js/select2.min.js"></script>
   <script src="<?= base_url(); ?>assets/js/demo/datatables-demo.js"></script>
+
+  <script type="text/javascript">
+    $("#selectProductForAddPackage").select2({
+        placeholder: 'Select Product',
+        language: 'id'
+    })
+  </script>
 
 </body>
 
 </html>
+

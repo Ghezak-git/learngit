@@ -21,7 +21,12 @@
   <!-- Custom styles for this template-->
   <link href="<?= base_url(); ?>assets/css/sb-admin-2.css" rel="stylesheet">
 
+  <script src="<?= base_url(); ?>assets/js/sweetalert.min.js"></script>
+  
+  <link rel="stylesheet" href="<?= base_url(); ?>assets/select2-4.0.6-rc.1/dist/css/select2.min.css">
+
   <link href="<?= base_url(); ?>assets/js/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  
 
 </head>
 
@@ -46,7 +51,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="<?= base_url(); ?>administrator/">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -74,7 +79,7 @@
       </div>
 
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="<?= base_url(); ?>administrator/kategori">
           <i class="fas fa-fw fa-shopping-cart"></i>
           <span>Category</span></a>
       </li>
@@ -86,7 +91,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="<?= base_url(); ?>administrator/package">
           <i class="fas fa-fw fa-archive"></i>
           <span>Product Package</span></a>
       </li>
@@ -103,6 +108,12 @@
         <a class="nav-link" href="index.html">
           <i class="fas fa-fw fa-fire"></i>
           <span>Promo</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-fw fa-clock"></i>
+          <span>Deals of the Week</span></a>
       </li>
 
       <li class="nav-item">

@@ -206,14 +206,14 @@ class Products_model extends CI_Model {
     //     return $this->db->get();
     // }
 
-    // public function getProductById($id){
-    //     $this->db->select("*,products.id AS productId, products.slug AS slugP");
-    //     $this->db->from("products");
-    //     $this->db->join("categories", "products.category=categories.id");
-    //     $this->db->order_by("products.id", "desc");
-    //     $this->db->where('products.id', $id);
-    //     return $this->db->get()->row_array();
-    // }
+    public function getProductById($id){
+        $this->db->select("*,produk.id_produk AS productId, produk.slug AS slugP");
+        $this->db->from("produk");
+        $this->db->join("kategori", "produk.kategori=kategori.id_kategori");
+        $this->db->order_by("produk.id_produk", "desc");
+        $this->db->where('produk.id_produk', $id);
+        return $this->db->get()->row_array();
+    }
 
     // public function getProductBySlug($slug){
     //     $this->db->select("*,products.id AS productId, products.slug AS slugP");
@@ -224,21 +224,21 @@ class Products_model extends CI_Model {
     //     return $this->db->get()->row_array();
     // }
 
-    // public function uploadImg(){
-    //     $config['upload_path'] = './assets/images/product/';
-    //     $config['allowed_types'] = 'jpg|png|jpeg|image/png|image/jpg|image/jpeg';
-    //     $config['max_size'] = '2048';
-    //     $config['file_name'] = round(microtime(true)*1000);
+    public function uploadImg(){
+        $config['upload_path'] = './assets/img/product/';
+        $config['allowed_types'] = 'jpg|png|jpeg|image/png|image/jpg|image/jpeg';
+        $config['max_size'] = '2048';
+        $config['file_name'] = round(microtime(true)*1000);
 
-    //     $this->load->library('upload', $config);
-    //     if($this->upload->do_upload('img')){
-    //         $return = array('result' => 'success', 'file' => $this->upload->data(), 'error' => '');
-    //         return $return;
-    //     }else{
-    //         $return = array('result' => 'failed', 'file' => '', 'error' => $this->upload->display_errors());
-    //         return $return;
-    //     }
-    // }
+        $this->load->library('upload', $config);
+        if($this->upload->do_upload('img')){
+            $return = array('result' => 'success', 'file' => $this->upload->data(), 'error' => '');
+            return $return;
+        }else{
+            $return = array('result' => 'failed', 'file' => '', 'error' => $this->upload->display_errors());
+            return $return;
+        }
+    }
 
     // public function insertImg($upload, $id){
     //     $data = [
@@ -248,84 +248,84 @@ class Products_model extends CI_Model {
     //     $this->db->insert('img_product', $data);
     // }
 
-    // public function insertProduct($upload){
-    //     $title = $this->input->post('title');
-    //     $price = $this->input->post('price');
-    //     $stock = $this->input->post('stock');
-    //     $category = $this->input->post('category');
-    //     $condit = $this->input->post('condit');
-    //     $weight = $this->input->post('weight');
-    //     $img = $upload['file']['file_name'];
-    //     $description = $this->input->post('description');
-    //     $date_submit = date("Y-m-d H:i:s");
-    //     $publish = $this->input->post('status');
-    //     function textToSlug($text='') {
-    //         $text = trim($text);
-    //         if (empty($text)) return '';
-    //         $text = preg_replace("/[^a-zA-Z0-9\-\s]+/", "", $text);
-    //         $text = strtolower(trim($text));
-    //         $text = str_replace(' ', '-', $text);
-    //         $text = $text_ori = preg_replace('/\-{2,}/', '-', $text);
-    //         return $text;
-    //     }
-    //     $slug =  textToSlug($title);
+    public function insertProduct($upload){
+        $title = $this->input->post('title');
+        $price = $this->input->post('price');
+        $stock = $this->input->post('stock');
+        $category = $this->input->post('category');
+        $condit = $this->input->post('condit');
+        $weight = $this->input->post('weight');
+        $img = $upload['file']['file_name'];
+        $description = $this->input->post('description');
+        $date_submit = date("Y-m-d H:i:s");
+        $publish = $this->input->post('status');
+        function textToSlug($text='') {
+            $text = trim($text);
+            if (empty($text)) return '';
+            $text = preg_replace("/[^a-zA-Z0-9\-\s]+/", "", $text);
+            $text = strtolower(trim($text));
+            $text = str_replace(' ', '-', $text);
+            $text = $text_ori = preg_replace('/\-{2,}/', '-', $text);
+            return $text;
+        }
+        $slug =  textToSlug($title);
 
 
-    //     $data = [
-    //         "title" => $title,
-    //         "price" => $price,
-    //         "stock" => $stock,
-    //         "category" => $category,
-    //         "condit" => $condit,
-    //         "weight" => $weight,
-    //         "img" => $img,
-    //         "description" => $description,
-    //         "date_submit" => $date_submit,
-    //         "publish" => $publish,
-    //         "slug" => $slug
-    //     ];
-    //     $this->db->insert('products', $data);
-    // }
+        $data = [
+            "judul" => $title,
+            "harga" => $price,
+            "stock" => $stock,
+            "kategori" => $category,
+            "kondisi" => $condit,
+            "berat" => $weight,
+            "img" => $img,
+            "deskripsi" => $description,
+            "tanggal_submit" => $date_submit,
+            "terbit" => $publish,
+            "slug" => $slug
+        ];
+        $this->db->insert('produk', $data);
+    }
 
-    // public function updateProduct($img, $id){
-    //     $title = $this->input->post('title');
-    //     $price = $this->input->post('price');
-    //     $stock = $this->input->post('stock');
-    //     $category = $this->input->post('category');
-    //     $condit = $this->input->post('condit');
-    //     $weight = $this->input->post('weight');
-    //     $img = $img;
-    //     $description = $this->input->post('description');
-    //     $publish = $this->input->post('status');
-    //     function textToSlug($text='') {
-    //         $text = trim($text);
-    //         if (empty($text)) return '';
-    //         $text = preg_replace("/[^a-zA-Z0-9\-\s]+/", "", $text);
-    //         $text = strtolower(trim($text));
-    //         $text = str_replace(' ', '-', $text);
-    //         $text = $text_ori = preg_replace('/\-{2,}/', '-', $text);
-    //         return $text;
-    //     }
-    //     $slug =  textToSlug($title);
+    public function updateProduct($img, $id){
+        $title = $this->input->post('title');
+        $price = $this->input->post('price');
+        $stock = $this->input->post('stock');
+        $category = $this->input->post('category');
+        $condit = $this->input->post('condit');
+        $weight = $this->input->post('weight');
+        $img = $img;
+        $description = $this->input->post('description');
+        $publish = $this->input->post('status');
+        function textToSlug($text='') {
+            $text = trim($text);
+            if (empty($text)) return '';
+            $text = preg_replace("/[^a-zA-Z0-9\-\s]+/", "", $text);
+            $text = strtolower(trim($text));
+            $text = str_replace(' ', '-', $text);
+            $text = $text_ori = preg_replace('/\-{2,}/', '-', $text);
+            return $text;
+        }
+        $slug =  textToSlug($title);
 
 
-    //     $data = [
-    //         "title" => $title,
-    //         "price" => $price,
-    //         "stock" => $stock,
-    //         "category" => $category,
-    //         "condit" => $condit,
-    //         "weight" => $weight,
-    //         "img" => $img,
-    //         "description" => $description,
-    //         "publish" => $publish,
-    //         "slug" => $slug,
-    //         "promo_price" => "0"
-    //     ];
+        $data = [
+            "judul" => $title,
+            "harga" => $price,
+            "stock" => $stock,
+            "kategori" => $category,
+            "kondisi" => $condit,
+            "berat" => $weight,
+            "img" => $img,
+            "deskripsi" => $description,
+            "terbit" => $publish,
+            "slug" => $slug,
+            "harga_promo" => "0"
+        ];
 
-    //     $this->db->where('id', $id);
-    //     $this->db->update('products', $data);
-    // }
+        $this->db->where('id_produk', $id);
+        $this->db->update('produk', $data);
+    }
 
     // public function updateViewer($slug){
     //     $result = $this->db->get_where('products', ['slug' => $slug])->row_array();

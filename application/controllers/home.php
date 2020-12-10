@@ -7,31 +7,31 @@ class Home extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->library('form_validation');
-		// $this->load->model('Categories_model');
+		$this->load->model('Categories_model');
+		$this->load->helper('rupiah_helper');
 		// $this->load->model('Products_model');
 		// $this->load->model('Settings_model');
 		// $this->load->model('Promo_model');
 	}
 
 	public function index(){
+		$data['title'] =  "Karma Shop";
 		// $data['title'] =  $this->Settings_model->general()["slogan"];
 		// $data['css'] = 'style';
 		// $data['responsive'] = 'style-responsive';
 		// $data['setting'] = $this->Settings_model->getSetting();
 		// $data['categories'] = $this->Categories_model->getCategories();
-		// $data['categoriesLimit'] = $this->Categories_model->getCategoriesLimit();
+		$data['categoriesLimit'] = $this->Categories_model->getCategoriesLimit();
 		// $data['promo'] = $this->Promo_model->getPromo();
 		// $data['getPromo'] = $this->Promo_model->getPromoLimit();
 		// $data['recent'] = $this->Products_model->getProductsLimit();
 		// $data['best'] = $this->Products_model->getBestProductsLimit();
 		// $data['allProducts'] = $this->db->get('products');
-		// $data['package'] = $this->db->get('package');
-		// $this->load->view('templates/header', $data);
-		$this->load->view('templates/header');
+		$data['package'] = $this->db->get('package');
+		$this->load->view('templates/header', $data);
 		$this->load->view('templates/navbar');
 		$this->load->view('templates/banner');
-		// $this->load->view('index', $data);
-		$this->load->view('index');
+		$this->load->view('index', $data);
 		$this->load->view('templates/footer');
 	}
 

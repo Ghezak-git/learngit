@@ -15,7 +15,7 @@
 	<!-- meta character set -->
 	<meta charset="UTF-8">
 	<!-- Site Title -->
-	<title>Karma Shop</title>
+	<title><?= $title ?></title>
 	<!--
 		CSS
 		============================================= -->
@@ -30,6 +30,34 @@
 	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/ion.rangeSlider.skinFlat.css" />
 	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/magnific-popup.css">
 	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/main.css">
+
+	<style type="text/css">
+		
+		.icon-category{
+			width: 50px;
+			height: 50px;
+			border-radius: 150px
+		}
+
+		.img-size{
+			max-width: 100%;
+			height: 275px;
+		}
+
+		.line-3{
+		    color: #333333;
+		    font-size: 15px;
+		    line-height: 22px;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    display: -webkit-box;
+		    -webkit-line-clamp: 2; /* number of lines to show */
+		    -webkit-box-orient: vertical;
+		}
+
+
+	</style>
+
 </head>
 
 <body>

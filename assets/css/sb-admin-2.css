@@ -25,7 +25,6 @@
   --gray: #858796;
   --gray-dark: #5a5c69;
   --primary: #4e73df;
-  --ghz: #ffba00;
   --secondary: #858796;
   --success: #1cc88a;
   --info: #36b9cc;
@@ -73,10 +72,6 @@ body {
 
 [tabindex="-1"]:focus {
   outline: 0 !important;
-}
-
-span {
-  color: #fff;
 }
 
 hr {
@@ -492,7 +487,7 @@ mark,
 
 .img-fluid {
   max-width: 100%;
-  height: auto;
+  max-height: auto;
 }
 
 .img-thumbnail {
@@ -5519,7 +5514,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   top: 0;
   right: 0;
   padding: 0.75rem 1.25rem;
-  color: inherit;
+  color: gray;
 }
 
 .alert-primary {

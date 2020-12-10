@@ -181,26 +181,24 @@ class Settings_model extends CI_Model {
   //     }
   //   }
 
-  //   public function insertPackage($upload){
-  //     $title = $this->input->post('title');
-  //     $banner = $upload['file']['file_name'];
-  //     function textToSlug($text='') {
-  //       $text = trim($text);
-  //       if (empty($text)) return '';
-  //       $text = preg_replace("/[^a-zA-Z0-9\-\s]+/", "", $text);
-  //       $text = strtolower(trim($text));
-  //       $text = str_replace(' ', '-', $text);
-  //       $text = $text_ori = preg_replace('/\-{2,}/', '-', $text);
-  //       return $text;
-  //     }
-  //     $slug = textToSlug($title);
-  //     $data = [
-  //       'title' => $title,
-  //       'banner' => $banner,
-  //       'slug' => $slug
-  //     ];
-  //     $this->db->insert('package', $data);
-  //   }
+    public function insertPackage(){
+      $title = $this->input->post('title');
+      function textToSlug($text='') {
+        $text = trim($text);
+        if (empty($text)) return '';
+        $text = preg_replace("/[^a-zA-Z0-9\-\s]+/", "", $text);
+        $text = strtolower(trim($text));
+        $text = str_replace(' ', '-', $text);
+        $text = $text_ori = preg_replace('/\-{2,}/', '-', $text);
+        return $text;
+      }
+      $slug = textToSlug($title);
+      $data = [
+        'judul' => $title,
+        'slug' => $slug
+      ];
+      $this->db->insert('package', $data);
+    }
 
   //   public function uploadBannerNews(){
   //     $config['upload_path'] = './assets/images/banner/';
